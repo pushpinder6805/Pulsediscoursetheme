@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Workplace Issues Tiles</title>
   <style>
+    
   </style>
 </head>
 <body>
@@ -15,8 +16,37 @@
   <div class="tile employee"></div>
   <div class="tile team"></div>
   <div class="tile other"></div>
+
+
+<!-- Right Sidebar -->
+  <aside class="sidebar">
+    <!-- Profile Area -->
+    <div class="profile-area">
+      <img src="{{currentUser.avatar_template}}" class="profile-picture">
+      <h3>Hi, {{currentUser.username}}</h3>
+      <p>Questions Answered: {{currentUser.answer_count}}</p>
+      <p>Questions Asked: {{currentUser.question_count}}</p>
+    </div>
+
+    <!-- Activity Area -->
+    <div class="activity-area">
+      <h4>Recent Activity</h4>
+      <!-- Activity list (dynamic content would be here) -->
+    </div>
+
+    <!-- Top Contributors -->
+    <div class="top-contributors">
+      <h4>Top Contributors</h4>
+      <!-- Contributor list (dynamic content would be here) -->
+    </div>
+
+    <!-- Latest Replies -->
+    <div class="latest-replies">
+      <h4>Latest Replies</h4>
+      <!-- Replies list (dynamic content would be here) -->
+    </div>
+  </aside>
 </body>
 </html>
-
   </section>
 {{/if}}
