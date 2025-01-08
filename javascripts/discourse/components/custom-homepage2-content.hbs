@@ -7,6 +7,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Workplace Issues Tiles</title>
   <style>
+      .container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+
+  .main-content {
+    flex: 3; /* Main content takes more space */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .tile {
+    width: 250px;
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+  }
+
+  .tile:hover {
+    transform: scale(1.05);
+  }
+
+  .sidebar {
+    flex: 1; /* Sidebar takes less space */
+    padding: 20px;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    height: 100vh; /* Optional: Full height */
+    overflow-y: auto; /* Scroll within the sidebar only if needed */
+  }
+
+  .profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+
+  .profile-area, .activity-area, .top-contributors, .latest-replies {
+    margin-bottom: 20px;
+  }
+
+  h3, h4 {
+    margin: 10px 0;
+  }
     .resources.snipcss-aQjeH body{
       font-family: Arial, sans-serif;
       display: flex;
@@ -136,60 +186,5 @@
     </div>
   </aside>
 </div>
-{{/if}}
-
-<style>
-  .container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-  }
-
-  .main-content {
-    flex: 3; /* Main content takes more space */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-  }
-
-  .tile {
-    width: 250px;
-    height: 250px;
-    background-size: cover;
-    background-position: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-  }
-
-  .tile:hover {
-    transform: scale(1.05);
-  }
-
-  .sidebar {
-    flex: 1; /* Sidebar takes less space */
-    padding: 20px;
-    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
-    height: 100vh; /* Optional: Full height */
-    overflow-y: auto; /* Scroll within the sidebar only if needed */
-  }
-
-  .profile-picture {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
-
-  .profile-area, .activity-area, .top-contributors, .latest-replies {
-    margin-bottom: 20px;
-  }
-
-  h3, h4 {
-    margin: 10px 0;
-  }
-</style>
-
   </section>
 {{/if}}
